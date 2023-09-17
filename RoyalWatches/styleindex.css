@@ -1,0 +1,548 @@
+body{
+    background-image: url(./Watchesimages/body.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* filter: brightness(0.2) */
+}
+
+/* Whatsapp */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+.float:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -3px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 3px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 3px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 3px) rotate(0deg); }
+    100% { transform: translate(1px, -3px) rotate(-1deg); }
+  }
+
+.img img{
+height: 600px;
+width: 100%;
+background-size: cover;
+}
+.img h1{
+text-align: center;
+
+}
+li {
+font-size: 15px;
+font-weight: 400;
+}
+.nav-item.dropdown .dropdown-toggle::after {
+display: none;
+color: #020812;
+}
+.nav-item{
+    background-color:rgba(19, 19, 19, 0.542);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.nav-item a{
+    font-size: 16px;
+color: #b0d5ee;
+text-shadow: 0 2px 10px rgba(0,255,255,0.7); 
+}
+
+.superNav {
+background-color:rgba(19, 19, 19, 0.669);
+box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+
+}
+.logo img{
+    padding-top:6px ;
+height:80px; 
+width: auto;
+/* padding-left:80px; */
+text-align: center;
+margin-top: -10px;
+}
+.logo h2{
+/* color: white; */
+background: -webkit-linear-gradient(rgba(0,255,255,0.7),rgb(209, 244, 244));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 30px;
+font-weight:30;
+font-style: italic;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.bannerrm{
+/* background-image: url(./fruitsbanner.jpg); */
+/* The image used */
+background-image: url("./fruitsbanner12.jpg");
+filter: brightness(0.4);
+min-height: 400px;
+
+position: relative;
+background-repeat: no-repeat;
+background-size:cover;
+width:100% ;
+
+/* Needed to position the navbar */
+/* position: relative; */
+
+}
+.Signup button{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 8px;
+    font-size: 14px;
+    color: #b0d5ee;
+   background: transparent !important;
+   box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+    1px 2px 4px 0px rgba(0,255,255,0.7),
+    2px 4px 8px 0px rgba(0,255,255,0.7),
+    2px 4px 16px 0px rgba(0,255,255,0.7);
+    
+}
+
+
+/* SLIDER */
+
+.image-text {
+position: absolute;
+top: 50%; /* Center vertically */
+left: 30%; /* Center horizontally */
+transform: translate(-50%, -50%);
+background-color: rgba(255, 255, 255, 0);
+padding: 10px;
+border-radius: 5px;
+}
+.image-text >h2{
+font-size: 50px;font-family: Arial, sans-serif;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  font-style: oblique; font-weight: 500;text-align: center ;color: #FFFAFC;
+
+}
+.image-text>p {
+font-size: 30px;font-family: Arial, sans-serif;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  font-style: oblique; font-weight: 500;text-align: center; color: #020812;}
+
+@media screen and (max-width: 800px) {
+.image-text>h2{
+font-size: 30px !important;
+padding-left: -35px ;
+}
+.image-text>p {
+font-size: 20px !important; /* Adjust the font size for mobile devices */
+padding-left: -35px;
+}
+}
+@keyframes fade-in-left {
+0% {
+opacity: 0;
+transform: translateX(-50px); /* Start offscreen to the left */
+}
+100% {
+opacity: 1;
+transform: translateX(0); /* End position, fully visible */
+}
+}
+
+/* Apply the animation to an element */
+.fade-in-left {
+animation: fade-in-left 2s ease-in-out forwards; /* Change the duration and easing as needed */
+
+}
+/* Define the keyframes for the fade in right animation */
+@keyframes fade-in-left {
+    0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Start offscreen to the left */
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0); /* End position, fully visible */
+    }
+    }
+/* .card img{
+transition: transform .2s; 
+}
+.card img:hover{
+filter: brightness(0.3);
+transform: scale(1.5); /
+} */
+
+.img-hover {
+overflow: hidden;
+}
+
+.img-hover img {
+transition: transform 0.3s ease-in-out;
+max-width: 100%;
+filter: brightness(0.6);
+
+/* Ensure images fit within their containers */
+}
+
+.img-hover:hover img {
+transform: scale(1.1);
+filter: brightness(0.3);
+/* Adjust the scale factor for zoom effect */
+}
+.img-hover {
+position: relative;
+
+}
+.card{
+box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+    1px 2px 4px 0px rgba(0,255,255,0.7),
+    2px 4px 8px 0px rgba(0,255,255,0.7),
+    2px 4px 16px 0px rgba(0,255,255,0.7);
+}
+.middle {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+}
+
+.middle .text{
+font-size: 20px;
+}
+
+.img-hover:hover.imagine {
+opacity: 0.3;
+
+}
+
+.img-hover:hover .middle {
+opacity: 1;
+background-color: #000000bd;
+color: rgba(0,255,255,0.7) ;
+border-radius: 20px;
+border: none;
+padding:10px 20px ;
+box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+    1px 2px 4px 0px rgba(0,255,255,0.7),
+    2px 4px 8px 0px rgba(0,255,255,0.7),
+    2px 4px 16px 0px rgba(0,255,255,0.7);
+}
+
+
+
+.home{
+ position: relative;
+ /* width: 100%; */
+ justify-content: space-between;
+ height: 80vh;
+ /* background-image: url(./body.jpg); */
+ background-position:center ;
+ background-size: cover;
+ display: flex;
+ align-items: center;
+ 
+ padding: 70px 20% 0;
+}
+
+.bigwatch{
+    position: relative;
+    animation-name: exampleb;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    
+}
+@keyframes exampleb {
+    0%   { left:100px; top:0px;}
+    
+    75%  { left:500px; top:0px;}
+    
+    75%  { left:0px;}
+    
+    }
+
+.home-content h1{
+    font-size: 50px;
+    padding-top: 100px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 15px rgba(0,255,255,0.7); 
+    position: relative;
+animation-name: example;
+animation-duration: 4s;
+animation-delay: 2s;
+
+}
+@keyframes example {
+0%   { right:100px; top:0px;}
+
+75%  { right:500px; top:0px;}
+
+75%  { right:0px;}
+
+}
+
+.home-content h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 15px rgba(243, 253, 253, 0.7); 
+    position: relative;
+    animation-name: example2;
+    padding-top: 30px;
+animation-duration: 3s;
+animation-delay: 2s;
+}
+@keyframes example2 {
+0%   { bottom:20px; top:0px;}
+10%   { bottom:500px; top:0px;}
+
+15%  { bottom:800px; top:0px;}
+
+75%  { bottom:0px;}
+
+}
+                         /* Loader */
+.line-loader {
+display: inline-block;
+width: 40px;
+height: 4px;
+background-color: #3498db; /* You can change the color here */
+animation: line-loader 5s infinite;
+animation-delay: 2s;
+text-shadow: 0 2px 15px rgba(0,255,255,0.7);
+/* box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+    1px 2px 4px 0px rgba(0,255,255,0.7),
+    2px 4px 8px 0px rgba(0,255,255,0.7),
+    2px 4px 16px 0px rgba(0,255,255,0.7); */
+    box-shadow: 
+    4px 2px 5px 0px rgba(0,255,255,0.7),
+     0px 2px 11px 3px rgba(0,255,255,0.7),
+      2px 4px 8px 0px rgba(0,255,255,0.7),
+       0px 4px 12px 0px rgba(0,255,255,0.7);
+}
+
+@keyframes line-loader {
+0% {
+width: 0;
+}
+50% {
+width: 100%;
+
+}
+100% {
+width: 100%;
+
+
+}
+}
+
+
+.line-loader2 {
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: #3498db; /* You can change the color here */
+    animation: line-loader2 8s infinite;
+    animation-delay: 2s;
+    text-shadow: 0 2px 15px rgba(0,255,255,0.7);
+    /* box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+        1px 2px 4px 0px rgba(0,255,255,0.7),
+        2px 4px 8px 0px rgba(0,255,255,0.7),
+        2px 4px 16px 0px rgba(0,255,255,0.7); */
+        box-shadow: 
+        4px 2px 5px 0px rgba(0,255,255,0.7),
+         0px 2px 11px 3px rgba(0,255,255,0.7),
+          2px 4px 8px 0px rgba(0,255,255,0.7),
+           0px 4px 12px 0px rgba(0,255,255,0.7);
+    }
+    
+    @keyframes line-loader2{
+    0% {
+    width: 0;
+    }
+    50% {
+    width: 100%;
+    
+    }
+    100% {
+    width: 100%;
+    
+    
+    }
+    }
+
+
+@media only screen and (max-width:600px) {
+
+.carousel-item {
+height: 300px;
+}
+
+.carousel-item img {
+height: 300px;
+object-fit: cover;
+}
+.image-text{
+
+font-size: 30px;
+}
+
+
+}
+
+
+    @media (min-width: 768px){
+.text-md-start {
+    text-align: center!important;
+}
+.col-md-6{
+    text-align: center!important;
+
+}
+    }
+    /* Footer */
+
+    footer{
+      
+        box-shadow: 2px 5px 30px 0px rgba(0,255,255,0.7), 
+        2px 5px 50px 10px rgba(0,255,255,0.7), 
+        4px 10px 8px 0px rgba(0,255,255,0.7), 
+        4px 6px 16px 0px rgba(0,255,255,0.7)
+
+      
+    }
+    
+  /* Video */
+  .video-parent-section.loaded .hero__media iframe, .video-parent-section.loaded .hero__media video {
+    opacity: 1;
+    animation: zoom-fade 2.5s cubic-bezier(.26,.54,.32,1) 0s forwards;
+    transition: none;
+}
+.hero__media-container, .hero__image-wrapper, .hero__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 50%;}
+
+    .hero__media video {
+        position: relative;
+        -o-object-fit: cover;
+        object-fit: cover;
+        font-family: "object-fit: cover";
+    }
+    video {
+        width: 100%;
+        height: 50%;
+        background-color: #0c0c0c;
+        pointer-events: none;}
+
+
+   
+
+
+
+        /* Sqaure Slider */
+
+      
+        
+        .carousel-inner img {
+            width: 100%
+        }
+        
+        .mycarosel img{
+            width: auto;
+            height: 500px !important;
+            filter: brightness(0.9);
+            /* box-shadow: 2px 5px 30px 0px rgba(0,255,255,0.7), 
+        2px 5px 50px 10px rgba(0,255,255,0.7), 
+        4px 10px 8px 0px rgba(0,255,255,0.7), 
+        4px 6px 16px 0px rgba(0,255,255,0.7) */
+        
+            
+        }
+        
+        #myCarousel .carousel-indicators {
+            position: static;
+            margin-top: 0px
+        }
+        
+        #myCarousel .carousel-indicators>li {
+            width: 80px
+        }
+        
+        #myCarousel .carousel-indicators li img {
+            display: block;
+            opacity: 0.5;
+             box-shadow: 2px 5px 30px 0px rgba(0,255,255,0.7), 
+        2px 5px 50px 10px rgba(0,255,255,0.7), 
+        4px 10px 8px 0px rgba(0,255,255,0.7), 
+        4px 6px 16px 0px rgba(0,255,255,0.7);
+        height: 100px;
+      
+        }
+        
+        #myCarousel .carousel-indicators li.active img {
+            opacity: 1;
+        }
+        
+        #myCarousel .carousel-indicators li:hover img {
+            opacity: 0.75
+        }
+        @media only screen and (max-width:920px) {
+            .mycarosel img{
+            height: 300px !important;
+            padding-left: 65px !important;
+            }
+            #myCarousel .carousel-indicators li img{
+                height: 80px;
+            }
+           
+        }
+        @media only screen and (max-width:766px) {
+          
+            .bigwatch img{
+                height: 300px !important;
+                width: auto;
+            }
+            .home-content h1{
+                padding-top: 40px !important;
+                font-size: 30px !important;
+            }
+            .logo h2{
+                font-size: 20px;
+            }
+            .logo img{
+                height: 50px;
+            }
+            .Signup button{
+                padding:2px 4px;
+                font-size: 8px;
+            }
+            .navbar-toggler{
+                padding: 1px 2px;
+            }
+        }
+    
+    

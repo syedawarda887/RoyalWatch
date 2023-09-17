@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="categories.js">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+      
+  -->
+  <link rel="stylesheet" href="cards.css">
+    <style>
+          body{
+            background-image: url(./body2opacity.jpg);
+            /* filter: brightness(0.2) */
+        }
+        
+      .img img{
+        height: 600px;
+        width: 100%;
+        background-size: cover;
+      }
+      .img h1{
+      text-align: center;
+
+      }
+      li {
+    font-size: 15px;
+    font-weight: 400;
+}
+.nav-item.dropdown .dropdown-toggle::after {
+        display: none;
+    }
+
+
+.superNav {
+    background-color:rgba(19, 19, 19, 0.542);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    
+}
+.logo img{
+    height: 100px; 
+    width: auto;
+    padding-left:80px;
+  text-align: center;
+  margin-top: -10px;
+}
+.bannerrm{
+    /* background-image: url(./fruitsbanner.jpg); */
+  /* The image used */
+  background-image: url("./fruitsbanner12.jpg");
+filter: brightness(0.4);
+  min-height: 400px;
+  
+ position: relative;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width:100% ;
+
+  /* Needed to position the navbar */
+  /* position: relative; */
+
+}
+
+     /* SLIDER */
+
+     .image-text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 30%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0);
+  padding: 10px;
+  border-radius: 5px;
+}
+.image-text >h2{
+font-size: 50px;font-family: Arial, sans-serif;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  font-style: oblique; font-weight: 500;text-align: center color: #FFFAFC;
+}
+.image-text>p {
+ font-size: 30px;font-family: Arial, sans-serif;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  font-style: oblique; font-weight: 500;text-align: center color: #020812;}
+
+ @media screen and (max-width: 600px) {
+  .image-text>h2{
+     font-size: 10px;
+  }
+  .image-text>p {
+    font-size: 10px; /* Adjust the font size for mobile devices */
+  }
+}
+@keyframes fade-in-left {
+0% {
+opacity: 0;
+transform: translateX(-50px); /* Start offscreen to the left */
+}
+100% {
+opacity: 1;
+transform: translateX(0); /* End position, fully visible */
+}
+}
+
+/* Apply the animation to an element */
+.fade-in-left {
+animation: fade-in-left 2s ease-in-out forwards; /* Change the duration and easing as needed */
+
+}
+/* Define the keyframes for the fade in right animation */
+@keyframes fade-in-right {
+0% {
+opacity: 0;
+transform: translateX(50px); /* Start offscreen to the right */
+}
+100% {
+opacity: 1;
+transform: translateX(0); /* End position, fully visible */
+}
+}
+/* .card img{
+    transition: transform .2s; 
+}
+.card img:hover{
+    filter: brightness(0.3);
+    transform: scale(1.5); /
+} */
+
+.img-hover {
+    overflow: hidden;
+  }
+  
+  .img-hover img {
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    filter: brightness(0.6);
+
+    /* Ensure images fit within their containers */
+  }
+
+  .img-hover:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.3);
+    /* Adjust the scale factor for zoom effect */
+  }
+  .img-hover {
+    position: relative;
+    
+  }
+  .card{
+    box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+            1px 2px 4px 0px rgba(0,255,255,0.7),
+            2px 4px 8px 0px rgba(0,255,255,0.7),
+            2px 4px 16px 0px rgba(0,255,255,0.7);
+  }
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .middle .text{
+    font-size: 20px;
+  }
+  
+   .img-hover:hover.imagine {
+    opacity: 0.3;
+
+  }
+  
+  .img-hover:hover .middle {
+    opacity: 1;
+    background-color: #000000bd;
+    color: rgba(0,255,255,0.7) ;
+    border-radius: 20px;
+    border: none;
+    padding:10px 20px ;
+    box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+            1px 2px 4px 0px rgba(0,255,255,0.7),
+            2px 4px 8px 0px rgba(0,255,255,0.7),
+            2px 4px 16px 0px rgba(0,255,255,0.7);
+  }
+
+  .home{
+         position: relative;
+         /* width: 100%; */
+         justify-content: space-between;
+         height: 80vh;
+         /* background-image: url(./body.jpg); */
+         background-position:center ;
+         background-size: cover;
+         display: flex;
+         align-items: center;
+         
+         padding: 70px 20% 0;
+        }
+      
+        .home-content h1{
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            text-shadow: 0 2px 15px rgba(0,255,255,0.7); 
+            position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-delay: 2s;
+
+        }
+        @keyframes example {
+  0%   { right:100px; top:0px;}
+ 
+  75%  { right:300px; top:0px;}
+
+  75%  { right:0px;}
+ 
+}
+        .home-content h2{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 2px 15px rgba(243, 253, 253, 0.7); 
+            position: relative;
+            animation-name: example2;
+  animation-duration: 3s;
+  animation-delay: 2s;
+        }
+        @keyframes example2 {
+  0%   { bottom:20px; top:0px;}
+  10%   { bottom:500px; top:0px;}
+ 
+  15%  { bottom:800px; top:0px;}
+
+  75%  { bottom:0px;}
+ 
+}
+.line-loader {
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  background-color: #3498db; /* You can change the color here */
+  animation: line-loader 5s infinite;
+  animation-delay: 2s;
+  text-shadow: 0 2px 15px rgba(0,255,255,0.7);
+  box-shadow: 4px 4px 16px 0px rgba(0,255,255,0.7),
+            1px 2px 4px 0px rgba(0,255,255,0.7),
+            2px 4px 8px 0px rgba(0,255,255,0.7),
+            2px 4px 16px 0px rgba(0,255,255,0.7);
+}
+
+@keyframes line-loader {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+
+  }
+  100% {
+    width: 100%;
+
+    
+  }
+}
+
+       /*Progressbar  */
+       
+       
+    </style>
+ 
+  </head>
+  <body>
+
+    <div class="topbar" style="height: 50px;width: 100%;background-color: black;" ><marquee behavior="" direction=""><h5 style="color: white;margin-bottom:10px;font-size: 15px;">Free delivery order now and explore our website</h5></marquee> </div>
+  
+      <header>
+          <div class="superNav border-bottom py-2 " >
+              <div class="container-fluid">
+                 
+                  <div class="row">
+                      <div class="col-md-4 ">
+                     <div class="Signup" style="line-height: 20px;margin-top: 20px;">
+                        <button style="border: none;border-radius: 20px;background-color: rgb(195, 148, 27);color: white;font-size: 15px;padding: 8px 10px;"> Sign Up </button>
+                        <button style="border: none;border-radius: 20px;background-color: rgb(195, 148, 27);color: white;font-size: 15px;padding: 8px 10px;"> Buy Now </button>
+                     </div>
+                          <!-- <img src="imagesmaybelline/MAYBELLINELogo.gif" height="120px" width="30%" style="margin-top: -20px;margin-left: 50px;"   alt=""> -->
+                      </div>
+
+                      <div class="col-md-4"> 
+
+                      <form class="d-flex me-1 "  >
+                        <!-- <div class="c">
+                           
+                          
+                            <select id="cityFilter" style="height: 40px;border-radius: 4px;border: none; width: 40px;">
+                                <option value="">All Categories</option>
+                                <option value="New York">Onion</option>
+                                <option value="Los Angeles">Apple</option>
+                                <option value="Chicago">Tomatos</option>
+                                <option value="New York">Bananas</option>
+                                <option value="Los Angeles">Papaya</option>
+                                <option value="Chicago">Cucumbers</option>
+                                <option value="New York">carruts</option>
+                                <option value="Los Angeles">Mangos</option>
+                                <option value="Chicago">Pumpkin</option>
+                            </select>
+                        </div>
+                        &nbsp;
+                          <input class="form-control me-2"  type="search" size="60"  placeholder="Search" aria-label="Search">
+                          <button class="btn " type="submit"><i class="fa-solid fa-magnifying-glass fa-lg" style="color: white;"></i></button>
+                        </form> -->
+                         
+                        <div class="logo">
+                            <img src="l-removebg-preview.png" width="auto" alt="">
+                        </div>
+                        </div>     
+                        
+                      </form>
+                          
+                          <div class="col-md-4  text-end"  style="margin-top: 20px;">
+                          <span class="me-3"><i class="fa-regular fa-bell me-3 fa-lg mt-3" style="color: white; "></i><a class="text" href="#"></a></span>
+                          <span class="me-3"><i class="fa-regular fa-comment me-3 fa-lg mt-3" style="color: white; "></i><a class="text" href="#"></a></span>
+                          <span class="me-3"><i class="fa-regular fa-user me-3 fa-lg mt-3" style="color: white;" ></i><a class="text" href="#"></a></span>
+                     
+                        </div>
+             
+          </div>
+          </div>
+      </div>
+          <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm" style="height:30px; width: 100%; z-index: 1;">
+              <!-- <div class="container-fluid " style="width: 100%;"> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color:rgb(54, 126, 54);" >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse" style="background-color: rgb(255, 255, 255); " id="navbarNavDropdown">
+                  
+                 
+                      <ul class="navbar-nav">
+
+                        <li class="nav-item ">
+                          <a class="nav-link mx-3 text- active " aria-current="page" href="#" ></a>
+                         
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link mx-3 text- active " aria-current="page" href="#" ></a>
+                       
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link mx-3 text- active " aria-current="page" href="#" ></a>
+                     
+                  </li>
+                         
+                        <li class="nav-item ">
+                          <a class="nav-link mx-3 text- active " aria-current="page" href="#" >Home</a>
+                         
+                      </li>
+                          
+                        <li class="nav-item dropdown ">
+                          <a class="nav-link  dropdown-toggle mx-1 text- active" aria-current="page" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#"></a>
+                              <a class="dropdown-item" href="#"></a>
+                              <a class="dropdown-item" href="#"></a>
+                              </div>
+                      </li>
+                      <li class="nav-item dropdown ">
+                              <a class="nav-link mx-3 text- active dropdown-toggle" aria-current="page" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Blog</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="#"> Formal</a>
+                                  <a class="dropdown-item" href="#"> Casual</a>
+                                  <a class="dropdown-item" href="#"> Ethnic</a>
+                                  </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link mx-3 text- active dropdown-toggle "aria-current="page" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About Us</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="#"> Formal</a>
+                                  <a class="dropdown-item" href="#">Casual</a>
+                                  <a class="dropdown-item" href="#"> Ethnic</a>
+                                  </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link mx-3 text- active dropdown-toggle" aria-current="page" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contect Us</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="#">Bags</a>
+                                  <a class="dropdown-item" href="#">Shoes</a>
+                                  <a class="dropdown-item" href="#">Watches</a>
+                                  </div>
+                          </li>
+                        
+                        
+                          
+                      
+                             
+                          
+                        
+                      </ul>
+  
+                      <ul class="navbar-nav  ms-auto">
+                          <li class="nav-item py-1">
+                              <a class="nav-link mx-3 text-uppercase active " aria-current="page" href="#"><i class=" fa-brands fa-square-facebook fa-xl" style="color: #0f58cc;"></i></a>                          
+                          </li>
+                        <li class="nav-item py-1">
+                          <a class="nav-link mx-3 text-uppercase active " href="#"><i class="fa-brands fa-youtube fa-xl" style="color: #ea1010;"></i></a>
+                        
+                      </li>
+                      <li class="nav-item py-1">
+                        <a class="nav-link mx-3 text-uppercase active " href="#"><i class="fa-brands fa-instagram fa-xl" style="color: #f20d93;"></i></a>
+                      
+                    </li>
+                         
+  
+                       </ul>  
+                  
+                  </div>
+                     
+                  </div>
+              </div>
+              
+          </nav>
+      </header>
+   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -- -->
+         <div class="carousel-indicators">
+         <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+         <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+         <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+         <!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button> -->
+ 
+       </div>
+ 
+       <!-- The slideshow/carousel -->
+       <div class="carousel-inner">
+         <div class="carousel-item banner active">
+           <img src="banner.jpg" alt="Los Angeles" class="d-block" hi width="100%">
+           <div class="image-text"  >
+            <h2 class="fade-in-left" >Welcome At OX World</h2>
+            <p class="fade-in-right"> lets rent earn and Wear</p>
+         </div>
+             
+           
+         </div>
+
+         <div class="carousel-item">
+           <img src="banner1.jpg" alt="Chicago" class="d-block" height="auto" width="100%">
+           <div class="image-text">
+             <h2 class="fade-in-left" >Follow The Trend</h2>
+             <p class="fade-in-right"> without worry of expense </p>
+          </div>
+         </div>
+
+         <div class="carousel-item">
+           <img src="banner3..jpg" alt="New York" class="d-block" height="auto" width="100%">
+           <div class="image-text" >
+             <h2 class="fade-in-left" >Unlock Your Earning </h2>
+             <p class="fade-in-right">Sharing Your Wardrobe</p>
+          </div>
+         </div>
+       
+       </div>
+ 
+     </div>
+        <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      </div> 
+
+ <!-- cards started -->
+ <div class="container py-5" style="padding: 20px;">
+    <!-- First Row [Prosucts]-->
+
+    <div class="row pb-4 mb-3">
+
+      <h1 class="  " style="color: white;font-size: 50px;text-align: center;   text-shadow: 0 2px 15px rgba(0,255,255,0.7); ">Categories</h1>
+      <!-- <p class="font-italic text mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> -->
+
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+
+        <!-- Card-->
+        <div class="card   ">
+          <div class="card-body p-0"> <a href="Images2/casualdress1-full(1).jpg">
+            <div class="img-hover">
+            <img src="womanwatches1.jpg" alt=""  class=" w-100"></a>
+            <div class="middle">
+                <div class="text">See more</div>
+              </div>
+        </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:300pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center">Woman Watches <br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card   ">
+          <div class="card-body p-0"><a href="Images2/womanethnic-1-full.jpg">
+            <div class="img-hover">
+            <img src="manwatches1.jpg" alt="" class=" w-100"></a>
+            <div class="middle">
+                <div class="text">See more</div>
+              </div>
+          </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:15000pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center">Man Watches <br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card bg-white  ">
+          <div class="card-body p-0">
+             <div class="img-hover">
+            <img src="childrenwatches1.jpg" alt="" class=" w-100"></a>
+            <div class="middle">
+                <div class="text">See more</div>
+              </div>
+          </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:2000pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center"> Children watches <br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card bg-w ">
+          <div class="card-body p-0"><a href="Images2/WomenValimadress.jpg">
+            <div class="img-hover">
+                <img src="simplewatches1.jpg" alt="" class=" w-100"></a>
+                <div class="middle">
+                    <div class="text">See more</div>
+                  </div>
+              </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:11000pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center">Simple Watches <br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row pb-5 py-3">
+
+      <!-- <h1 class="  mb-3">Man's</h1> -->
+
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card ">
+          <div class="card-body p-0"> <div class="img-hover">
+            <img src="iphonewatches1.jpg" alt="" class=" w-100"></a>
+            <div class="middle">
+                <div class="text">See more</div>
+              </div>
+          </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:1500pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center">I phone watches <br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card bg-w">
+          <div class="card-body p-0"><a href="Images2/ManEthnic(3).jpg">
+            <div class="img-hover">
+                <img src="bridalwatches1.jpg" alt="" class=" w-100"></a>
+                <div class="middle">
+                    <div class="text">See more</div>
+                  </div>
+              </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:1100pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center">Bridal Watches<br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card ">
+          <div class="card-body p-0"><a href="Images2/manCasualwear(1).jpg"> <div class="img-hover">
+            <img src="hotsellingweches1.jpg" alt="" class=" w-100"></a>
+            <div class="middle">
+                <div class="text">See more</div>
+              </div>
+          </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:500pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center">Hot Selling Watches <br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card ">
+          <div class="card-body p-0"><a href="Images2/manPantCourt(1).jpg"> <div class="img-hover">
+            <img src="brandwatches1.jpg" alt="" class=" w-100"></a>
+            <div class="middle">
+                <div class="text">See more</div>
+              </div>
+          </div>
+            <div class="p-1 ">
+              <h6 class="mb-0 mt-1" style="font-size:15px;text-align: center;color: grey;">Rent:1900pkr</h6>
+              <p class="text mb-0 mt-0" style="margin-top: 0px;font-size:20px;font-weight: 500;text-align: center">Branded Watches<br>
+              
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    
+      </div>
+
+    </div>
+
+    <div class="line-loader"></div>
+    <!-- <div class="home">
+        <img src="bannerwatch.png" style="filter: brightness(0.9); height: 500px; width: auto;" alt="">
+
+       <div class="home-content">
+      
+        <h1>Watches New Look</h1>
+        <h2>Every design Available </h2>
+        <h3>2023</h3>
+        <div class="home-sci"></div>
+
+
+       </div>
+       
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="bannerwatch.png" style="filter: brightness(0.9); height: 500px; width: auto;" alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="home-content">
+      
+                    <h1>Watches New Look</h1>
+                    <h2>Every design Available </h2>
+                   
+                    <div class="home-sci"></div>
+            
+            
+                   </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- cards -->
+    <!-- CARDS -->
+    <section class="section-products">
+		<div class="container">
+				<div class="row justify-content-center text-center">
+						<div class="col-md-8 col-lg-6">
+								<div class="header">
+									<img src="imagesmaybelline/sign.gif" height="200px" alt="">
+										<h2 style="background-color:  #292426d1; border-radius: 30px;color: rgb(232, 232, 232);">Popular Products</h2>
+								</div>
+						</div>
+				</div>
+				<div class="row">
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-1" class="single-product" > 
+                                    .
+										<div class="part-1">
+											
+												<ul >
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Maybelline Lipstick in dark pink</h3>
+												<h4 class="product-old-price">RS.649</h4>
+												<h4 class="product-price">RS.449</h4> &nbsp;
+												<h4 style="color: rgb(6, 149, 6);" >In stock</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-2" class="single-product">
+										<div class="part-1">
+												<span class="discount">15% off</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Maybelline Fit Me Blush on</h3>
+												<h4 class="product-price">RS.999</h4> &nbsp;
+												<h4 style="color: rgb(6, 149, 6);" >In stock</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-3" class="single-product">
+										<div class="part-1">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Maybelline Lip gloss in light orange</h3>
+												<h4 class="product-old-price">RS.1,999</h4>
+												<h4 class="product-price">RS.899</h4> &nbsp;
+												<h4 style="color: rgb(200, 12, 9);" >Out of stock</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-4" class="single-product">
+										<div class="part-1">
+												<span class="new">new</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Maybelline Blusher baby pink glow </h3>
+												<h4 class="product-price">RS.1,299</h4> &nbsp;
+												<h4 style="color: rgb(6, 149, 6);" >In stock</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-5" class="single-product">
+										<div class="part-1">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Maybelline Tint blusher</h3>
+												<h4 class="product-old-price">RS.2,698</h4>
+												<h4 class="product-price">RS.999</h4>  &nbsp;
+												<h4 style="color: rgb(200, 12, 9);" >Out of stock</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-6" class="single-product">
+										<div class="part-1">
+												<span class="discount">15% off</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Maybelline Lip gloss light pink mate </h3>
+												<h4 class="product-price">2,999</h4>  &nbsp;
+												<h4 style="color: rgb(6, 149, 6);" >In stock</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-7" class="single-product">
+										<div class="part-1">
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Maybelline Tint Blusher glow </h3>
+												<h4 class="product-old-price">RS.3,999</h4>
+												<h4 class="product-price">RS.2,999</h4>  &nbsp;
+												<h4 style="color: rgb(6, 149, 6);" >In Stock</h4>
+										</div>
+								</div>
+						</div>
+						<!-- Single Product -->
+						<div class="col-md-6 col-lg-4 col-xl-3">
+								<div id="product-8" class="single-product">
+										<div class="part-1">
+												<span class="new">new</span>
+												<ul>
+														<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+														<li><a href="#"><i class="fas fa-heart"></i></a></li>
+														<li><a href="#"><i class="fas fa-plus"></i></a></li>
+														<li><a href="#"><i class="fas fa-expand"></i></a></li>
+												</ul>
+										</div>
+										<div class="part-2">
+												<h3 class="product-title">Gloss Maybelline dark pink</h3>
+												<h4 class="product-price">RS.5,999</h4>  &nbsp;
+												<h4 style="color: rgb(6, 149, 6);" >In Stock</h4>
+
+										</div>
+								</div>
+						</div>
+  
+</body>
+</html>
